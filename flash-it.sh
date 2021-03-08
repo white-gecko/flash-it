@@ -223,7 +223,7 @@ Some commands require root permissions, you might be asked to enter your passwor
 
 #create loop file for raw.img
 if [ "$DEVICE_NODE" = raw ]; then
-	as_root dd if=/dev/zero of=sdcard.img bs=1 count=0 seek=4G
+	dd if=/dev/zero of=sdcard.img bs=1 count=0 seek=4G
 	DEVICE_NODE=./sdcard.img
 fi
 
